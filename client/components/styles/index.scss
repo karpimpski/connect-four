@@ -1,0 +1,18 @@
+#board{
+	background: blue;
+	width: 790px;
+}
+
+.row{
+	display: flex;
+	height: 100px;
+	margin: 10px;
+}
+
+.hole{
+	width: 100px;
+	height: 100px;
+	border-radius: 100%;
+	background: white;
+	margin: 5px;
+}
