@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
+import Hole from './hole.jsx';
+
 class Row extends Component {
 
 	constructor(props){
@@ -10,12 +12,12 @@ class Row extends Component {
   render(){
     let holes = [];
     for(var i = 0; i < 7; i++){
-      holes.push(<div className='hole' key={i} />)
+      holes.push(<Hole player={this.props.player} changePlayer={() => this.props.changePlayer()} key={i} />)
     }
     return (
     	<div className='row'>
-            {holes}
-        </div>
+        {holes}
+      </div>
     );
   }
 }
