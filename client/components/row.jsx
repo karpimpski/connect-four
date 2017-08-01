@@ -12,7 +12,7 @@ class Row extends Component {
   render(){
     let holes = [];
     for(var i = 0; i < 7; i++){
-      holes.push(<Hole player={this.props.player} changePlayer={() => this.props.changePlayer()} key={i} />)
+      holes.push(<Hole row={this.props.row} column={i} player={this.props.player} changePlayer={this.props.changePlayer} key={i} />)
     }
     return (
     	<div className='row'>

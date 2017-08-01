@@ -17,4 +17,4 @@ class Index extends Component {
   }
 }
 
-ReactDOM.render(<Index name='World'/>, document.getElementById('root'));
+ReactDOM.render(<Index />, document.getElementById('root'));

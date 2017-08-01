@@ -5,20 +5,16 @@ class Hole extends Component {
 
 	constructor(props){
 		super(props);
-		this.state = {color: ''}
+		this.state = {color: false}
 	}
 
 	clickFunction(){
-		let color = this.state.color;
-		let player = this.props.player;
-		if(player === 1){
-			color = 'yellow';
-		}
-		else if(player === 2){
-			color = 'red';
-		}
-		this.setState({color: color});
-		this.props.changePlayer();
+		if(this.props.changePlayer(this)){
+			let color = this.state.color;
+			this.props.player === 1 ? color = 'yellow' : color = 'red';
+			this.setState({color: color});
+		};
+		
 	}
 
   render(){
