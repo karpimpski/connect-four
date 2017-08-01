@@ -1,12 +1,18 @@
+div{
+	margin: 0;
+	padding: 0;
+}
+
 #board{
 	background: blue;
-	width: 790px;
+	width: 820px;
 }
 
 .row{
 	display: flex;
 	height: 100px;
 	margin: 10px;
+	padding: 10px;
 }
 
 .hole{
