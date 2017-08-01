@@ -1,12 +1,13 @@
 {
-  "name": "react-skeleton",
+  "name": "connect-four",
   "version": "1.0.0",
-  "description": "React skeleton",
+  "description": "Connect Four game made with React",
   "main": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "concurrently \"node server\" \"cd client && webpack -d --watch\"",
-    "build": "cd client && webpack -p"
+    "build": "cd client && webpack -p",
+    "start": "node server"
   },
   "author": "Michael Karpinski",
   "license": "ISC",
