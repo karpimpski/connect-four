@@ -9,7 +9,7 @@ class Hole extends Component {
 	}
 
 	clickFunction(){
-		if(this.props.changePlayer(this)){
+		if(this.props.isAvailable(this)){
 			let color = this.state.color;
 			this.props.player === 1 ? color = 'yellow' : color = 'red';
 			this.setState({color: color});
