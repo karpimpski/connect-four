@@ -37,14 +37,19 @@ class Board extends Component {
   }
 
   checkVictory(hole){
-    this.checkDirection(hole, 1, 0);
+    const combinations = [ [1,0], [-1, 0], [0,1], [0,-1], [1,1], [-1,-1], [-1,1], [1,-1] ]
+    for(let i = 0; i < combinations.length; i++){
+      if(this.checkDirection(hole,combinations[i][0], combinations[i][1])){
+        break;
+      }
+    }
   }
 
   checkDirection(hole, changeColumn, changeRow, numberCompleted=1){
     const currentColumn = hole.props.column + (changeColumn * numberCompleted);
     const currentRow = hole.props.row + (changeRow * numberCompleted);
     this.state.taken.map((arr) => {
-      let matched = arr[0] == currentColumn && arr[1] == currentRow;
+      let matched = arr[0] == currentColumn && arr[1] == currentRow && arr[2] === hole.props.player;
       if(matched){
         if(numberCompleted === 3){
           console.log('victory!');
